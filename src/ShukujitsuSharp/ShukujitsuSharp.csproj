@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>ShukujitsuSharp</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Description>ShukujitsuSharp determines japanese holiday.</Description>
+    <Authors>SIkebe</Authors>
+    <Product>ShukujitsuSharp</Product>
+    <PackageProjectUrl>https://github.com/SIkebe/ShukujitsuSharp</PackageProjectUrl>
+    <Copyright>MIT</Copyright>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IsPackable>true</IsPackable>
+    <PackAsTool>true</PackAsTool>
+    <PackageOutputPath>../../packages</PackageOutputPath>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
