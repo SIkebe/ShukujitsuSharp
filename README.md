@@ -1,4 +1,7 @@
 # ShukujitsuSharp
+[![Build status](https://github.com/SIkebe/ShukujitsuSharp/workflows/CI/badge.svg)](https://github.com/SIkebe/ShukujitsuSharp/actions?query=workflow%3A%22CI%22)
+[![NuGet version](https://badge.fury.io/nu/ShukujitsuSharp.svg)](https://badge.fury.io/nu/ShukujitsuSharp)
+
 This library is heavily inspired by [soh335 / shukujitsu](https://github.com/soh335/shukujitsu/).
 
 ShukujitsuSharp determines Japanese holiday.  
