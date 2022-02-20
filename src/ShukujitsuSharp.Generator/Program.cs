@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Text;
 using ShukujitsuSharp;
 
@@ -11,7 +12,7 @@ var allShukujitsu = csv
     .Skip(1) // Skip header
     .Where(x => !string.IsNullOrEmpty(x)) // Skip the last empty line
     .Select(x => x.Split(","))
-    .Select(x => new Shukujitsu(DateOnly.Parse(x[0]), x[1]));
+    .Select(x => new Shukujitsu(DateOnly.Parse(x[0]), x[1].Replace("\r", ""))); // Remove "CR"
 
 var builder = new StringBuilder();
 using var writer = new StringWriter(builder) { NewLine = "\n" };
@@ -36,4 +37,6 @@ writer.WriteLine("""
     }
     """);
 
-await File.WriteAllTextAsync("src/ShukujitsuSharp/ShukujitsuData.cs", builder.ToString());
+var exe = Assembly.GetAssembly(typeof(Program))?.Location!;
+var data = Path.Combine(Directory.GetParent(exe)!.Parent!.Parent!.Parent!.Parent!.FullName!, "ShukujitsuSharp/ShukujitsuData.cs");
+await File.WriteAllTextAsync(data, builder.ToString());
