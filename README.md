@@ -21,6 +21,7 @@ if (Shukujitsu.IsShukujitsu(new DateOnly(2022, 1, 1)))
 
 if (Shukujitsu.Find(new DateOnly(2022, 1, 1), out var name))
 {
-    Console.WriteLine($"2022-01-01 is {name}");
+    // 2022-01-01 is 元日.
+    Console.WriteLine($"2022-01-01 is {name}.");
 }
 ```
