@@ -3,8 +3,6 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>ShukujitsuSharp</RootNamespace>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
     <Description>ShukujitsuSharp determines japanese holiday.</Description>
     <Authors>SIkebe</Authors>
     <Product>ShukujitsuSharp</Product>

@@ -1,23 +1,30 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32210.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C88FDAF2-7356-41EF-9B29-303A2D521C03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShukujitsuSharp", "src\ShukujitsuSharp\ShukujitsuSharp.csproj", "{FCD42647-A856-4ACF-8180-CC16E04B617B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShukujitsuSharp", "src\ShukujitsuSharp\ShukujitsuSharp.csproj", "{FCD42647-A856-4ACF-8180-CC16E04B617B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShukujitsuSharp.Generator", "src\ShukujitsuSharp.Generator\ShukujitsuSharp.Generator.csproj", "{B94C4DE2-AE94-4544-ABBF-B49F83582382}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShukujitsuSharp.Generator", "src\ShukujitsuSharp.Generator\ShukujitsuSharp.Generator.csproj", "{B94C4DE2-AE94-4544-ABBF-B49F83582382}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShukujitsuSharp.Tests", "src\ShukujitsuSharp.Tests\ShukujitsuSharp.Tests.csproj", "{354E622F-5B18-45D8-B605-C3FF30CB1AFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShukujitsuSharp.Tests", "src\ShukujitsuSharp.Tests\ShukujitsuSharp.Tests.csproj", "{354E622F-5B18-45D8-B605-C3FF30CB1AFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{7B95946F-4EBA-473E-BCFD-E5685002FE9B}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		global.json = global.json
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FCD42647-A856-4ACF-8180-CC16E04B617B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -33,9 +40,15 @@ Global
 		{354E622F-5B18-45D8-B605-C3FF30CB1AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{354E622F-5B18-45D8-B605-C3FF30CB1AFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FCD42647-A856-4ACF-8180-CC16E04B617B} = {C88FDAF2-7356-41EF-9B29-303A2D521C03}
 		{B94C4DE2-AE94-4544-ABBF-B49F83582382} = {C88FDAF2-7356-41EF-9B29-303A2D521C03}
 		{354E622F-5B18-45D8-B605-C3FF30CB1AFB} = {C88FDAF2-7356-41EF-9B29-303A2D521C03}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35C1FE46-2F87-4D0C-86EA-6D13A1B9B044}
 	EndGlobalSection
 EndGlobal
