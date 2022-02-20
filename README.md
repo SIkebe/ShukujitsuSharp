@@ -14,6 +14,8 @@ dotnet run --project ./src/ShukujitsuSharp.Generator
 
 ## How to use this library
 ```csharp
+using ShukujitsuSharp;
+
 if (Shukujitsu.IsShukujitsu(new DateOnly(2022, 1, 1)))
 {
     Console.WriteLine("shukujitsu!");
