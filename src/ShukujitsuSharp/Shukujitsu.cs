@@ -1,4 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ShukujitsuSharp;
 
@@ -13,12 +13,29 @@ public partial class Shukujitsu
     public DateOnly Date { get; }
     public string Name { get; }
 
-    public static bool IsShukujitsu(DateOnly date) => Dates.Any(d => d.Date == date);
+    public static bool IsShukujitsu(DateOnly date)
+    {
+        EnsureAcceptableRange(date);
+
+        return Dates.Any(d => d.Date == date);
+    }
 
     public static bool Find(DateOnly date, [NotNullWhen(true)] out string? name)
     {
-        var shukujitsu =  Dates.SingleOrDefault(d => d.Date == date);
+        EnsureAcceptableRange(date);
+
+        var shukujitsu = Dates.SingleOrDefault(d => d.Date == date);
         name = shukujitsu?.Name;
         return shukujitsu is not null;
+    }
+
+    private static void EnsureAcceptableRange(DateOnly date)
+    {
+        var min = Dates.MinBy(d => d.Date)?.Date;
+        var max = Dates.MaxBy(d => d.Date)?.Date;
+        if (date < min || max < date)
+        {
+            throw new ArgumentOutOfRangeException(nameof(date));
+        }
     }
 }
