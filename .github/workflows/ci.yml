@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - if: github.event_name == 'push' 
+      uses: actions/checkout@v2
+    - if: github.event_name == 'pull_request' 
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: | 
+          6.0.x
+          7.0.x
+        include-prerelease: true
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+    - name: Update
+      run: |
+        dotnet run --project ./src/ShukujitsuSharp.Generator
+        git diff --exit-code --quiet && exit
+        git add .
+        git config --global user.email SIkebe@users.noreply.github.com
+        git config --global user.name SIkebe
+        git commit -m 'Update ShukujitsuData.cs'
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v3
+      with:
+        title: Update ShukujitsuData.cs
+        token: ${{ secrets.GITHUB_TOKEN }}
