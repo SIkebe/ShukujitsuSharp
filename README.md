@@ -6,7 +6,7 @@ Holidays are collected from https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.
 
 ## How to renew holiday definitions
 ```
-dotnet run --project .\src\ShukujitsuSharp.Generator
+dotnet run --project ./src/ShukujitsuSharp.Generator
 ```
 
 ## Prerequisites
