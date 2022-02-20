@@ -4,11 +4,6 @@ This library is heavily inspired by [soh335 / shukujitsu](https://github.com/soh
 ShukujitsuSharp determines Japanese holiday.  
 Holidays are collected from https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv
 
-## How to renew holiday definitions
-```
-dotnet run --project ./src/ShukujitsuSharp.Generator
-```
-
 ## Prerequisites
 * .NET 6 or later
 
