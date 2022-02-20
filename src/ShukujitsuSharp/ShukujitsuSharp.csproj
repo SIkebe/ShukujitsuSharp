@@ -12,7 +12,6 @@
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IsPackable>true</IsPackable>
-    <PackAsTool>true</PackAsTool>
     <PackageOutputPath>../../packages</PackageOutputPath>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
