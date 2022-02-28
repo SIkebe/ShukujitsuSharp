@@ -1,6 +1,8 @@
 name: check-update
 
-permissions: write-all
+permissions:
+  contents: write
+  pull-requests: write
 
 on:
   schedule:
