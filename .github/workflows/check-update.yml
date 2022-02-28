@@ -22,14 +22,11 @@ jobs:
     - name: Update
       run: |
         dotnet run --project ./src/ShukujitsuSharp.Generator
-        if ! git diff --exit-code --quiet
-        then
-          git status
-          git add -A
-          git config user.name SIkebe
-          git config user.email SIkebe@users.noreply.github.com
-          git commit -m "Update ShukujitsuData.cs"
-        fi
+        git diff --exit-code --quiet && exit
+        git add -A
+        git config --global user.name SIkebe
+        git config --global user.email SIkebe@users.noreply.github.com
+        git commit -m "Update ShukujitsuData.cs"
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v3
       with:
