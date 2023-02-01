@@ -5,7 +5,7 @@ using ShukujitsuSharp;
 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
 var client = new HttpClient();
-var bytes = await client.GetByteArrayAsync("https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv");
+var bytes = await client.GetByteArrayAsync("https://www8.cao.go.jp/chosei/shukujitsu/shukujitsu.csv");
 var csv = Encoding.GetEncoding("shift_jis").GetString(bytes);
 var allShukujitsu = csv
     .Split(Environment.NewLine)
