@@ -5,7 +5,7 @@
 This library is heavily inspired by [soh335 / shukujitsu](https://github.com/soh335/shukujitsu/).
 
 ShukujitsuSharp determines Japanese holiday.  
-Holidays are collected from https://www8.cao.go.jp/chosei/shukujitsu/shukujitsu.csv
+Holidays are collected from https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv
 
 ## Prerequisites
 * .NET 6 or later
