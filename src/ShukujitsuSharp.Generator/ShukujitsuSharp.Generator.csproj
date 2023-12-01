@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>ShukujitsuSharp.Generator</RootNamespace>
+    <NoWarn>CA2234;CA2007</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
