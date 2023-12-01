@@ -11,6 +11,8 @@
     "vscode": {
       "extensions": [
         "EditorConfig.EditorConfig",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
         "ms-dotnettools.csharp"
       ]
     }
