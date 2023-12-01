@@ -1,13 +1,13 @@
 {
-	"name": "C# (.NET)",
-	"image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0",
-	"features": {
+  "name": "C# (.NET)",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0",
+  "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {
       "installDirectlyFromGitHubRelease": true,
       "version": "latest"
     }
   },
-	"customizations": {
+  "customizations": {
     "vscode": {
       "extensions": [
         "EditorConfig.EditorConfig",
