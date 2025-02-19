@@ -31,6 +31,10 @@ public partial class Shukujitsu
     /// </returns>
     public static bool IsShukujitsu(int year, int month, int day)
     {
+        if (year < 1 || month < 1 || month > 12 || day < 1 || day > DateTime.DaysInMonth(year, month))
+        {
+            throw new ArgumentOutOfRangeException("引数が適切な年月日の形式ではありません。");
+        }
         return IsShukujitsu(new DateOnly(year, month, day));
     }
 
