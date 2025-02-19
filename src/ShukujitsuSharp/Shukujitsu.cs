@@ -20,6 +20,20 @@ public partial class Shukujitsu
         return Dates.Any(d => d.Date == date);
     }
 
+    /// <summary>
+    /// 指定された日付が祝日（日本の公休日）であるかどうかを判断します。
+    /// </summary>
+    /// <param name="year">日付の年の部分。</param>
+    /// <param name="month">日付の月の部分。</param>
+    /// <param name="day">日付の日の部分。</param>
+    /// <returns>
+    /// 指定された日付が祝日である場合は<c>true</c>。それ以外の場合は<c>false</c>。
+    /// </returns>
+    public static bool IsShukujitsu(int year, int month, int day)
+    {
+        return IsShukujitsu(new DateOnly(year, month, day));
+    }
+
     public static bool Find(DateOnly date, [NotNullWhen(true)] out string? name)
     {
         EnsureAcceptableRange(date);

@@ -21,6 +21,20 @@ public class ShukujitsuSharpTest
     }
 
     [Fact]
+    public void Should_Be_Shukujitsu_With_Year_Month_Day()
+    {
+        var result = Shukujitsu.IsShukujitsu(2021, 1, 1);
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void Should_Not_Be_Shukujitsu_With_Year_Month_Day()
+    {
+        var result = Shukujitsu.IsShukujitsu(2022, 1, 2);
+        Assert.False(result);
+    }
+
+    [Fact]
     public void Should_Find_Shukujitsu()
     {
         var date = new DateOnly(2022, 1, 1);
