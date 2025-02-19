@@ -72,7 +72,7 @@ public class ShukujitsuSharpTest
     [Fact]
     public void Should_Throw_Exception_For_Invalid_Date()
     {
-        Assert.Throws<ArgumentOutOfRangeException>(() => Shukujitsu.IsShukujitsu(2021, 2, 20));
+        Assert.Throws<ArgumentOutOfRangeException>(() => Shukujitsu.IsShukujitsu(2021, 2, 30));
         Assert.Throws<ArgumentOutOfRangeException>(() => Shukujitsu.IsShukujitsu(2021, 13, 1));
         Assert.Throws<ArgumentOutOfRangeException>(() => Shukujitsu.IsShukujitsu(0, 1, 1));
     }
