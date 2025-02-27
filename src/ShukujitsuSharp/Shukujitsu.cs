@@ -20,6 +20,11 @@ public partial class Shukujitsu
         return Dates.Any(d => d.Date == date);
     }
 
+    public static bool IsShukujitsu(int year, int month, int day)
+    {
+        return IsShukujitsu(new DateOnly(year, year, day));
+    }
+
     public static bool Find(DateOnly date, [NotNullWhen(true)] out string? name)
     {
         EnsureAcceptableRange(date);
