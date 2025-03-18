@@ -54,4 +54,18 @@ public class ShukujitsuSharpTest
         Assert.IsType<ArgumentOutOfRangeException>(ex3);
         Assert.IsType<ArgumentOutOfRangeException>(ex4);
     }
+
+    [Fact]
+    public void Should_Be_Shukujitsu_With_YearMonthDay()
+    {
+        var result = Shukujitsu.IsShukujitsu(2021, 1, 1);
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void Should_Not_Be_Shukujitsu_With_YearMonthDay()
+    {
+        var result = Shukujitsu.IsShukujitsu(2022, 1, 2);
+        Assert.False(result);
+    }
 }
