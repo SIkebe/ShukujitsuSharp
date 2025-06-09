@@ -3,6 +3,9 @@ namespace ShukujitsuSharp;
 
 public partial class Shukujitsu
 {
+    /// <summary>
+    /// Gets the collection of all Japanese holidays with their dates and names.
+    /// </summary>
     public static IEnumerable<Shukujitsu> Dates => new List<Shukujitsu>
     {
         new Shukujitsu(new DateOnly(1955, 1, 1), "元日"),
