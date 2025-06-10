@@ -10,13 +10,22 @@
     <Copyright>MIT</Copyright>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IsPackable>true</IsPackable>
     <PackageOutputPath>../../packages</PackageOutputPath>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    
+    <!-- Source Link Configuration -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    
+    <!-- Deterministic builds help ensure reproducible builds -->
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
   </PropertyGroup>
 
+
   <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
     <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="LICENSE.txt" />
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
