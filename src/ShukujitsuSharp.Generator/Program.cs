@@ -30,6 +30,9 @@ await writer.WriteLineAsync("""
 
     public partial class Shukujitsu
     {
+        /// <summary>
+        /// Gets the collection of all Japanese holidays with their dates and names.
+        /// </summary>
         public static IEnumerable<Shukujitsu> Dates => new List<Shukujitsu>
         {
     """);
